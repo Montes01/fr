@@ -1,0 +1,61 @@
+.Beneficio{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: rgb(255, 248, 239);
+
+}
+.containerImage{
+    grid-column: 1/2;
+}
+.containerBeneficio{
+    grid-column: 2/3;
+}
+
+.lista {
+    margin-top: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 60%;
+  }
+  
+  .lista ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .lista li {
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+    border: 2px solid transparent;
+  }
+  
+  .lista li:hover {
+    transform: scale(1.05);
+    color: #007bff;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+  }
+  
+  .lista li:before {
+    content: '\2022'; /* Punto grande */
+    color: black; /* Color del símbolo */
+    font-size: 22px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .lista li:hover:before {
+    color: #007bff; /* Cambia el color al pasar el ratón */
+  }

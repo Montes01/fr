@@ -14,7 +14,7 @@
     z-index: 1000;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Futura', sans-serif;
+    Font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
 }
 .header.scrolled{
     background-color: black;

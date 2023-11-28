@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Header from './components/Header/Header'
 import Section from './components/Section/Section'
 import Servicios from './components/Servicios/Servicios'
-
+import Beneficios from './components/Beneficios/Beneficios'
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
     <Header></Header>
     <Section></Section>
     <Servicios></Servicios>
+    <Beneficios></Beneficios>
     </>
   )
 }

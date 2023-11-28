@@ -1,13 +1,15 @@
 import React from 'react'
 import './Servicios.css'
 export default function Servicios() {
+
+
   return (
     <section>
         <div className="container1">
             <div className="containerP1">
                 <div className="tituloServicio">
             <h1>Servicios</h1>
-            <p>Brindamos servicios de remolque de vehículos y asistencia de mecánico para garantizar que estés respaldado en todo momento. Ya sea que tu vehículo haya sufrido una avería, necesite un remolque o requiera asistencia de un mecánico en carretera, estamos aquí para ayudarte las 24 horas del día, los 7 días de la semana.</p>
+            <p>Ofrecemos servicios integrales las 24 horas, 7 días a la semana, que incluyen remolque de vehículos y asistencia mecánica. Estamos comprometidos a respaldarte en situaciones de avería, remolque o cualquier necesidad de asistencia en carretera que puedas tener.</p>
                 </div>
             <div className="info">
                 <div className="parte1">
