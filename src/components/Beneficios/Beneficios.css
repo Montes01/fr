@@ -1,8 +1,10 @@
 .Beneficio{
     display: grid;
-    grid-template-columns: 50% 50%;
-    background-color: rgb(255, 248, 239);
-
+    grid-template-columns: 45% 55%;
+    background-color: #F7F7F7;
+    overflow: hidden;
+    height: 90vh;
+    align-items: center;
 }
 .containerImage{
     grid-column: 1/2;
@@ -10,15 +12,23 @@
 .containerBeneficio{
     grid-column: 2/3;
 }
+.containerBeneficio h1{
+  font-size: 30px;
+  font-family: 'Century Gothic', sans-serif;
+  text-align: center;
+}
 
 .lista {
     margin-top: 20px;
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f8f8;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    width: 60%;
+    font-family: 'Helvetica', sans-serif;
+    background-color: black;
+    color: white;
+    padding: 45px;
+    border-top-left-radius: 110px;
+    border-bottom-left-radius: 110px;
+    box-shadow: 0px 0px 7px 5px gray;
+    width: 100%;
+
   }
   
   .lista ul {
@@ -32,30 +42,31 @@
     position: relative;
     line-height: 1.6;
     font-size: 18px;
-    color: #333;
     cursor: pointer;
-    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
-    border: 2px solid transparent;
+    transition: transform 0.2s ease-in-out;
+    border: 2px solid gray;
+    width: 60%;
+    border-radius: 8px;
   }
   
   .lista li:hover {
     transform: scale(1.05);
-    color: #007bff;
-    border: 2px solid #007bff;
-    border-radius: 10px;
+    color: aqua;
+    border: 2px solid aqua;
+    border-radius: 8px;
   }
   
   .lista li:before {
-    content: '\2022'; /* Punto grande */
-    color: black; /* Color del símbolo */
+    content: '\25cf'; 
+    /* color: black;  */
     font-size: 22px;
     position: absolute;
-    left: 0;
+    left: 1%;
     top: 50%;
     transform: translateY(-50%);
     transition: color 0.2s ease-in-out;
   }
   
   .lista li:hover:before {
-    color: #007bff; /* Cambia el color al pasar el ratón */
+    color: aqua; /* Cambia el color al pasar el ratón */
   }
