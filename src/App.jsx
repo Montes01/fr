@@ -1,19 +1,10 @@
-import { useState } from 'react'
-// import './App.css'
-import Header from './components/Header/Header'
-import Section from './components/Section/Section'
-import Servicios from './components/Servicios/Servicios'
-import Beneficios from './components/Beneficios/Beneficios'
+import React from 'react'
+import Routes from './Routes'
 
-function App() {
+export default function App() {
   return (
-    <>
-    <Header></Header>
-    <Section></Section>
-    <Servicios></Servicios>
-    <Beneficios></Beneficios>
-    </>
+    <div>
+      <Routes/>
+    </div>
   )
 }
-
-export default App

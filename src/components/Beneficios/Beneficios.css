@@ -13,9 +13,19 @@
     grid-column: 2/3;
 }
 .containerBeneficio h1{
-  font-size: 30px;
+  font-size: 38px;
   font-family: 'Century Gothic', sans-serif;
-  text-align: center;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hrBeneficio{
+  width: 91%;
+  height: 0.5vh;
+  background-color: #E30A13;
+  border: none;
+  margin-left: 9%;
 }
 
 .lista {
@@ -69,4 +79,14 @@
   
   .lista li:hover:before {
     color: aqua; /* Cambia el color al pasar el ratón */
+  }
+
+  .containerImage img{
+    width: 70%;
+    box-shadow: 10px 10px 10px ;
+  }
+  .containerImage{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
   }

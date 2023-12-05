@@ -5,12 +5,14 @@ export default function Beneficio() {
   return (
     <section className='Beneficio'>
       <div className="containerImage">
-        <h1>hola</h1>
+        <img src="https://cdn.pixabay.com/photo/2018/05/11/23/45/highway-3392100_1280.jpg" alt="" />  
       </div>
 
 
       <div className="containerBeneficio">
-        <h1>Cuando pides un servicio en Gruapp obtienes:</h1>
+        <h1>Cuando pides un servicio en Gruapp obtienes:
+          <hr className='hrBeneficio' />
+        </h1>
         <div className="lista">
             <ul>
                   <li>Soporte 24/7</li>
