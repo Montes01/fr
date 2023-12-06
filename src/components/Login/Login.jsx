@@ -1,9 +1,10 @@
 import React from 'react'
+import './Login.css'
 
 export default function Login() {
   return (
-    <div>
-        <h1>hola</h1>
-    </div>
+    <section className='sectionLogin'>
+        hola
+    </section>
   )
 }

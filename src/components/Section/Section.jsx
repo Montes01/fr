@@ -1,5 +1,7 @@
 import React from 'react'
 import './Section.css'
+import Servicio from '../Servicios/Servicios'
+import Beneficio from '../Beneficios/Beneficios'
 export default function Section() {
   return (
     <section className='section1'>
@@ -9,6 +11,8 @@ export default function Section() {
             <a className='button1' href="">CHAT</a>
             <a className='button2' href="">GRÚAS</a>
         </div>
+          <Servicio/>
+          <Beneficio/>
     </section>
    
   )

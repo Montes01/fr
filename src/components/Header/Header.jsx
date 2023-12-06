@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from 'react'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Header.css'
 
 export default function Header() {
@@ -24,11 +24,13 @@ export default function Header() {
             <nav className='navbar'>
                 <ul>
                     <li>
-                        <a href="">Home</a>
-                        <a href="">Gruas</a>
-                        <a href="">Chat</a>
-                        <a href="">Login</a>
-                        <a href="">Register</a>
+                        <NavLink to="/">Home</NavLink>
+                        {/* <NavLink to ="/servicio">servicio</NavLink>
+                        <NavLink to="/beneficio">beneficio</NavLink> */}
+                        <NavLink to="/gruas">Gruas</NavLink>
+                        {/* <NavLink to="/chat">Chat</NavLink> */}
+                        <NavLink to="/login">Login</NavLink>
+                        <NavLink to="/register">Register</NavLink>
                     </li>
                 </ul>
             </nav>
