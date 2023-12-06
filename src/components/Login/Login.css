@@ -1,7 +1,12 @@
 .sectionLogin{
-    background: url(https://cdn.pixabay.com/photo/2020/08/25/00/48/mountains-5515324_640.jpg) ;
+    width: 100%;
+    height: 100vh;
     background-size: cover;
     position: relative;
-    width: 100%;
-    height: 150vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.cajalogin{
+    
+    background-color: #E30A13;
 }

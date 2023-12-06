@@ -4,7 +4,12 @@ import './Login.css'
 export default function Login() {
   return (
     <section className='sectionLogin'>
-        hola
+        <div className="cajalogin">
+
+        </div>
+        <div className="cajacolor">
+          
+        </div>
     </section>
   )
 }
