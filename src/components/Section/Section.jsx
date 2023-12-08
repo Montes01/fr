@@ -2,6 +2,8 @@ import React from 'react'
 import './Section.css'
 import Servicio from '../Servicios/Servicios'
 import Beneficio from '../Beneficios/Beneficios'
+import Contacto from '../Contacto/Contacto'
+import Footer from '../footer/Footer'
 export default function Section() {
   return (
     <section className='section1'>
@@ -13,6 +15,8 @@ export default function Section() {
         </div>
           <Servicio/>
           <Beneficio/>
+          <Contacto/>
+          <Footer/>
     </section>
    
   )

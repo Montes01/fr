@@ -5,7 +5,7 @@ export default function Register() {
   return (
     <section className="registro-container">
       <form className="registro-form" onSubmit={(e) => e.preventDefault()}>
-        <h2>Registro</h2>
+        <h2 className='tituloRegister'>Registro</h2>
         <label>
           Usuario:
           <input type="text" name="username" />

@@ -1,12 +1,55 @@
-.sectionLogin{
-    width: 100%;
+/* Login.css */
+
+.login-container {
+    background-color: #333;
+    color: #fff;
     height: 100vh;
-    background-size: cover;
-    position: relative;
-    display: grid;
-    grid-template-columns: 50% 50%;
-}
-.cajalogin{
-    
-    background-color: #E30A13;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-form {
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+.iniciar {
+    color: #0077cc;
+    text-align: center;
+  }
+  
+  label {
+    margin-top: 15px;
+    font-size: 16px;
+  }
+  
+  input {
+    margin-top: 8px;
+    padding: 12px;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+  }
+  
+  button {
+    margin-top: 20px;
+    background-color: #0077cc;
+    color: #fff;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #005580;
+  }
+  

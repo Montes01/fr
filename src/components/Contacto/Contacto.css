@@ -1,0 +1,54 @@
+/* Contacto.css */
+
+.contact-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background-color: #333;
+    margin-top: 10%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  .tituloContacto {
+    color: #0077cc;
+    text-align: center;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  input,
+  textarea {
+    margin-top: 8px;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+  }
+  
+  .buttoncontac {
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .buttoncontac:hover {
+    background-color: whitesmoke;
+    color:#e30a13;
+  }
+  
