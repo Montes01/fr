@@ -3,7 +3,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Section from './components/Section/Section';
-import GruasP2 from './components/Gruas/GruasP2/GruasP2';
+import Gruas from './components/Gruas/Gruas';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 
@@ -13,7 +13,7 @@ const App = () => {
         <Header/>
         <Routes>
           <Route path='/' element ={<Section />} />
-          <Route path='/gruas' element = {<GruasP2/>} />
+          <Route path='/gruas' element = {<Gruas/>} />
           <Route path='/login' element = {<Login/>} />
           <Route path='/register' element = {<Register/>} />
       </Routes>

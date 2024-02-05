@@ -8,7 +8,7 @@ import Grua5 from '../images/grua9.jpg'
 import Grua6 from '../images/grua8.png'
 import Grua7 from '../images/grua10.jpg'
 import Grua8 from '../images/grua11.jpg'
-
+import GruasP2 from './GruasP2/GruasP2';
 
 const gruasData = [
   {
@@ -82,7 +82,11 @@ const Gruas = () => {
 
   return (
     <div className="gruas-container">
-     
+      <GruasP2/>
+      <div className="container-Image">
+      <img className='imageG' src="https://cdn-icons-png.flaticon.com/128/5731/5731878.png" alt="" />
+      <hr className='hrImage'/>
+      </div>
       <div className="infoGruas">
       {gruasData.map((grua) => (
         <div key={grua.id} className="grua-item">
