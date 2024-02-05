@@ -24,7 +24,7 @@ export default function Header() {
             <nav className='navbar'>
                 <ul>
                     <li>
-                        <NavLink to="/">Home</NavLink>
+                        <NavLink to="/">Inicio</NavLink>
                         <NavLink to="/gruas">Gruas</NavLink>
                         <NavLink to="/login">Login</NavLink>
                         <NavLink to="/register">Register</NavLink>
