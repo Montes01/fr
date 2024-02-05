@@ -82,7 +82,8 @@ const Gruas = () => {
 
   return (
     <div className="gruas-container">
-      <h1 className='titulo'>GRUAS A  DISPOSICION</h1>
+     
+      <div className="infoGruas">
       {gruasData.map((grua) => (
         <div key={grua.id} className="grua-item">
           <img src={grua.imagen} alt={grua.nombre} className="grua-imagen" />
@@ -103,6 +104,8 @@ const Gruas = () => {
           </div>
         </div>
       ))}
+
+      </div>
     </div>
   );
 };

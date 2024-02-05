@@ -17,7 +17,7 @@ export default function Header() {
   return (
       <header className='header'>
         <div className="logo">
-        <h1><a href="index.html">Gruapp</a>
+        <h1>Gruapp
             <hr className='hr1'/>
         </h1>        
         </div>
@@ -25,10 +25,7 @@ export default function Header() {
                 <ul>
                     <li>
                         <NavLink to="/">Home</NavLink>
-                        {/* <NavLink to ="/servicio">servicio</NavLink>
-                        <NavLink to="/beneficio">beneficio</NavLink> */}
                         <NavLink to="/gruas">Gruas</NavLink>
-                        {/* <NavLink to="/chat">Chat</NavLink> */}
                         <NavLink to="/login">Login</NavLink>
                         <NavLink to="/register">Register</NavLink>
                     </li>

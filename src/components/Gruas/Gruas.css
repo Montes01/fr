@@ -1,13 +1,18 @@
-.gruas-container {
-    display: grid;
-    grid-template-columns: repeat(3, 2fr); /* 3 columnas */
-    grid-template-rows: repeat(4, 1fr); /* 2 filas */
-    gap: 50px; /* Espacio entre las grúas */
-    /*justify-content: space-around;*/
-    align-items: flex-start;
-    margin-top:200px;
-    margin-left: 20px;
-    margin-right: 20px;
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+.infoGruas{
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 2fr); /* 3 columnas */
+  grid-template-rows: repeat(4, 1fr); /* 2 filas */
+  gap: 50px; /* Espacio entre las grúas */
+  margin-top: 30%;
   }
   
   .grua-item {
