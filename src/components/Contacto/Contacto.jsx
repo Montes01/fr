@@ -25,7 +25,7 @@ const Contacto = () => {
 
   return (
     <div className="contact-container">
-      <h2 className='tituloContacto'>Contacto</h2>
+      <h2 className='tituloContacto'>Contactanos</h2>
       <form className="contact-form" onSubmit={handleSubmit}>
         <label htmlFor="name">Nombre:</label>
         <input

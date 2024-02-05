@@ -22,7 +22,7 @@ export default function Register() {
           Contraseña:
           <input type="password" name="password" />
         </label>
-        <button type="submit">Registrar</button>
+        <button type="submit">Registrarse</button>
       </form>
     </section>
   );
