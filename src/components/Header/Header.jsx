@@ -17,9 +17,11 @@ export default function Header() {
   return (
       <header className='header'>
         <div className="logo">
-        <h1>Gruapp
-            <hr className='hr1'/>
-        </h1>        
+          <a href="/">
+            <h1>Gruapp
+              <hr className='hr1'/>
+            </h1>        
+          </a>
         </div>
             <nav className='navbar'>
                 <ul>
