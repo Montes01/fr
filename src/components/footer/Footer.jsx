@@ -8,8 +8,8 @@ const Footer = () => {
   return (
     <footer className="footer-container">
       <div className="footer-content">
-        <p>&copy; 2023 Tu Empresa. Todos los derechos reservados.</p>
-        <p>info@tuempresa.com</p>
+        <p>&copy; 2023 Gruapp. Todos los derechos reservados.</p>
+        <p>info@Gruapp.com</p>
       </div>
     </footer>
   );

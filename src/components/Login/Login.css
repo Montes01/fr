@@ -14,11 +14,18 @@
     padding: 20px;
     border: 1px solid #555;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid #e30a13;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 57, 57, 0.8);
+    background-color: #282828;
+    transition: transform 0.3s ease-in-out;
+    background: linear-gradient(45deg, #7c7d7e, #000000, #444444, #6b6b6b);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
   }
   
 .iniciar {
-    color: #0077cc;
+    color: #ffffff;
     text-align: center;
   }
   
@@ -38,7 +45,7 @@
   
   button {
     margin-top: 20px;
-    background-color: #0077cc;
+    background-color: #ffffff;
     color: #fff;
     padding: 15px;
     font-size: 18px;
@@ -50,6 +57,6 @@
   }
   
   button:hover {
-    background-color: #005580;
+    background-color: #ffffff;
   }
   
