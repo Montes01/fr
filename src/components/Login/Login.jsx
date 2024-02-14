@@ -15,8 +15,10 @@ const Login = () => {
   };
 
   const handleRedirect = () => {
-    // Redirigir al usuario a la página de inicio
-    window.location.href = '/';
+    // Redirigir al usuario a la página de inicio después de 3 segundos (3000 milisegundos)
+    setTimeout(() => {
+      window.location.href = '/';
+    }, 3000);
   };
 
   const handleSubmit = (e) => {
@@ -46,7 +48,7 @@ const Login = () => {
           // Configurar el mensaje de éxito
           setMessage('Inicio de sesión exitoso. ¡Bienvenido!');
 
-          // Redirigir al usuario a la página de inicio
+          // Redirigir al usuario a la página de inicio después de un breve retraso
           handleRedirect();
         } else {
           // Manejar la autenticación fallida, mostrar un mensaje de error, etc.

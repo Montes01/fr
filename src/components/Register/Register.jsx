@@ -64,7 +64,7 @@ export default function Register() {
 
     // Redirigir después de cerrar el alert (puedes ajustar el tiempo según tus necesidades)
     setTimeout(() => {
-      window.location.href = '/'; // Puedes cambiar esto por la ruta a la que deseas redirigir
+      window.location.href = '/Login'; // Puedes cambiar esto por la ruta a la que deseas redirigir
     }, 100);
   };
 
