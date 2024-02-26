@@ -6,6 +6,7 @@ import Section from './components/Section/Section';
 import Gruas from './components/Gruas/Gruas';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
+import AgregarGrua from './components/AgregarGrua/AgregarGrua';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Route path='/gruas' element = {<Gruas/>} />
           <Route path='/login' element = {<Login/>} />
           <Route path='/register' element = {<Register/>} />
+          <Route path= '/AgregarGrua' element={<AgregarGrua/>}/>
       </Routes>
       </div>
   );

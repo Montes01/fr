@@ -48,12 +48,38 @@ export default function Header() {
       <nav className='navbar'>
         <ul>
           <li>
-            <NavLink to="/">Inicio</NavLink>
-            <NavLink to="/gruas">Gruas</NavLink>
-                 {/* Mostrar el enlace de Log Out solo si el usuario está autenticado */}
+            <NavLink className='opciones' to="/">Inicio</NavLink>
+            <NavLink className='opciones' to="/gruas">Servicios</NavLink>
+                
+              {usuarioAutenticado &&(
+                <NavLink className='aggGrua'  to= "/AgregarGrua" >+ Grúa</NavLink>
+              )}
+
+              {/* Mostrar el enlace de "Mi Cuenta" solo si el usuario está autenticado */}
+          {usuarioAutenticado && (
+            <NavLink 
+            className='rayasHorizontales' to=""> <img  src="https://cdn-icons-png.flaticon.com/128/14505/14505987.png" alt="" />
+            <ul className='menuVertical'>
+                <li><a href=""> 
+                {usuarioAutenticado && (
+                  <NavLink  to=''>
+                    Perfil
+                  </NavLink>
+                )} </a></li>
+           
+              <li><a href="">
+                {/* Mostrar el enlace de Log Out solo si el usuario está autenticado */}
                  {usuarioAutenticado && (
-              <NavLink to="/" onClick={handleLogout}>Log out</NavLink>
-            )}
+                  <NavLink to="/" onClick={handleLogout}> <img className='cerrar' src="https://cdn-icons-png.flaticon.com/128/4113/4113923.png" alt="" /> </NavLink>
+                   )}
+
+
+            </a></li></ul>
+
+            
+            </NavLink>
+          )}
+
             {/* Mostrar el enlace de inicio de sesión solo si el usuario no está autenticado */}
             {!usuarioAutenticado && (
               <>
