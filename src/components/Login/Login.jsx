@@ -67,8 +67,9 @@ const Login = () => {
     <div className="login-container">
       <form className="login-form" onSubmit={handleSubmit}>
         <h2 className='iniciar'>Iniciar Sesión</h2>
-        <label htmlFor="email">Correo Electrónico:</label>
+        <label className='label-login' htmlFor="email">Correo Electrónico:</label>
         <input
+          className='input-login'
           type="email"
           id="email"
           name="email"
@@ -77,8 +78,9 @@ const Login = () => {
           required
         />
 
-        <label htmlFor="password">Contraseña:</label>
+        <label className='label-login' htmlFor="password">Contraseña:</label>
         <input
+          className='input-login'
           type="password"
           id="password"
           name="password"

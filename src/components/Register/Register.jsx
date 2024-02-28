@@ -72,21 +72,21 @@ export default function Register() {
     <section className="registro-container">
       <form className="registro-form" onSubmit={handleSubmit}>
         <h2 className="tituloRegister">Registro</h2>
-        <label>
+        <label className='label-register'>
           Usuario:
-          <input type="text" name="user" onChange={handleChange} />
-        </label>
-        <label>
+          <input className='input-register' type="text" name="user" onChange={handleChange} />
+        </label >
+        <label className='label-register'>
           Correo electrónico:
-          <input type="email" name="email" onChange={handleChange} />
+          <input className='input-register' type="email" name="email" onChange={handleChange} />
         </label>
-        <label>
+        <label className='label-register'>
           Número telefónico:
-          <input type="tel" name="phone" onChange={handleChange} />
+          <input className='input-register' type="tel" name="phone" onChange={handleChange} />
         </label>
-        <label>
+        <label className='label-register'>
           Contraseña:
-          <input type="password" name="password" onChange={handleChange} />
+          <input className='input-register' type="password" name="password" onChange={handleChange} />
         </label>
         <button type="submit">Registrarse</button>
       </form>

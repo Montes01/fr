@@ -10,7 +10,7 @@
   }
   
   .login-form {
-    max-width: 400px;
+    width: 21%;
     padding: 20px;
     border: 1px solid #555;
     border-radius: 8px;
@@ -29,12 +29,12 @@
     text-align: center;
   }
   
-  label {
+  .label-login {
     margin-top: 15px;
     font-size: 16px;
   }
   
-  input {
+  .input-login{
     margin-top: 8px;
     padding: 12px;
     font-size: 14px;

@@ -62,7 +62,7 @@ export default function Header() {
             <ul className='menuVertical'>
                 <li><a href=""> 
                 {usuarioAutenticado && (
-                  <NavLink  to=''>
+                  <NavLink  to='/ProfileForm'>
                     Perfil
                   </NavLink>
                 )} </a></li>
