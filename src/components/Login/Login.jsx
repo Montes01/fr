@@ -25,7 +25,7 @@ const Login = () => {
     e.preventDefault();
 
     // Realizar la solicitud al backend
-    fetch('http://localhost:3000/auth', {
+    fetch('http://localhost:3000/api/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
