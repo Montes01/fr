@@ -3,7 +3,7 @@ import './Register.css';
 
 export default function Register() {
   const [formData, setFormData] = useState({
-    user: '',
+    username: '',
     email: '',
     phone: '',
     password: '',
@@ -17,7 +17,7 @@ export default function Register() {
     e.preventDefault();
 
     // Validar campos obligatorios
-    if (!formData.user || !formData.email || !formData.phone || !formData.password) {
+    if (!formData.username || !formData.email || !formData.phone || !formData.password) {
       alert('Todos los campos son obligatorios');
       return;
     }
@@ -45,7 +45,7 @@ export default function Register() {
     }
 
     // Enviar solicitud al servidor solo si pasa todas las validaciones
-    const response = await fetch('http://localhost:3000/register', {
+    const response = await fetch('http://localhost:3000/api/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -74,7 +74,7 @@ export default function Register() {
         <h2 className="tituloRegister">Registro</h2>
         <label className='label-register'>
           Usuario:
-          <input className='input-register' type="text" name="user" onChange={handleChange} />
+          <input className='input-register' type="text" name="username" onChange={handleChange} />
         </label >
         <label className='label-register'>
           Correo electrónico:
