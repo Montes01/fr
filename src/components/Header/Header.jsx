@@ -16,14 +16,12 @@ export default function Header() {
     verificarAutenticacion();
   }, []);
 
-  const handleLogout = () =>{
-
-      // elimina el token
+  const handleLogout = () => {
+    // elimina el token
     localStorage.removeItem('authToken');
-      // Actualizamos el estado para reflejar que el usuario ya no está autenticado
+    // Actualizamos el estado para reflejar que el usuario ya no está autenticado
     setUsuarioAutenticado(false);
-
-  }
+  };
 
   document.addEventListener('scroll', function () {
     const header = document.querySelector('.header');
@@ -39,46 +37,45 @@ export default function Header() {
   return (
     <header className='header'>
       <div className="logo">
-        <a href="/">
-          <h1>Gruapp
+        <NavLink to="/">
+          <h1>
+            Gruapp
             <hr className='hr1'/>
-          </h1>        
-        </a>
+          </h1>
+        </NavLink>
       </div>
       <nav className='navbar'>
         <ul>
           <li>
             <NavLink className='opciones' to="/">Inicio</NavLink>
             <NavLink className='opciones' to="/gruas">Servicios</NavLink>
-                
-              {usuarioAutenticado &&(
-                <NavLink className='aggGrua'  to= "/AgregarGrua" >+ Grúa</NavLink>
-              )}
 
-              {/* Mostrar el enlace de "Mi Cuenta" solo si el usuario está autenticado */}
-          {usuarioAutenticado && (
-            <NavLink 
-            className='rayasHorizontales' to=""> <img  src="https://cdn-icons-png.flaticon.com/128/14505/14505987.png" alt="" />
-            <ul className='menuVertical'>
-                <li><a href=""> 
-                {usuarioAutenticado && (
-                  <NavLink  to='/ProfileForm'>
-                    Perfil
-                  </NavLink>
-                )} </a></li>
-           
-              <li><a href="">
-                {/* Mostrar el enlace de Log Out solo si el usuario está autenticado */}
-                 {usuarioAutenticado && (
-                  <NavLink to="/" onClick={handleLogout}> <img className='cerrar' src="https://cdn-icons-png.flaticon.com/128/4113/4113923.png" alt="" /> </NavLink>
-                   )}
+            {usuarioAutenticado && (
+              <NavLink className='aggGrua' to="/AgregarGrua">+ Grúa</NavLink>
+            )}
 
-
-            </a></li></ul>
-
-            
-            </NavLink>
-          )}
+            {/* Mostrar el enlace de "Mi Cuenta" solo si el usuario está autenticado */}
+            {usuarioAutenticado && (
+              <NavLink className='rayasHorizontales'>
+                <img src="https://cdn-icons-png.flaticon.com/128/14505/14505987.png" alt="" />
+                <ul className='menuVertical'>
+                  <li>
+                    {usuarioAutenticado && (
+                      <NavLink to='/ProfileForm'>
+                        Perfil
+                      </NavLink>
+                    )}
+                  </li>
+                  <li>
+                    {usuarioAutenticado && (
+                      <NavLink to="/" onClick={handleLogout}>
+                        <img className='cerrar' src="https://cdn-icons-png.flaticon.com/128/4113/4113923.png" alt="" />
+                      </NavLink>
+                    )}
+                  </li>
+                </ul>
+              </NavLink>
+            )}
 
             {/* Mostrar el enlace de inicio de sesión solo si el usuario no está autenticado */}
             {!usuarioAutenticado && (

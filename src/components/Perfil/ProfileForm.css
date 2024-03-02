@@ -5,6 +5,7 @@
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   color: white;
+  background-color: black;
 }
 .profile-photo {
   border-radius: 50%;
@@ -82,10 +83,30 @@ button:hover {
   background-color: #45a049;
 }
 .section-perfil{
-  background-color: black;
+  background-color:white;
   height: 130vh;
   display: flex;
   align-items: center;
   justify-content: center;
   
+}
+
+.input-user{
+ width: 85%;
+ background-color: #262626;
+ border:none;
+ color: white;
+}
+
+.input-email{
+  width: 70%;
+  background-color: #262626;
+  border: none;
+  color: white;
+}
+.input-phoneNumber{
+  width: 85%;
+  background-color: #262626;
+  border: none;
+  color: white;
 }
