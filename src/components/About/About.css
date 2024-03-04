@@ -1,0 +1,57 @@
+.bodyt{
+  
+}
+
+.about-box {
+    padding: 110px;
+    background: url(https://img.freepik.com/foto-gratis/foto-carretera-rodeada-campos-hierba-seca-cielo-puesta-sol_181624-10934.jpg?w=1380&t=st=1709534045~exp=1709534645~hmac=855101b53c4a54b888d08e3ac7bbd0bda7aa2450fb971e53c5fbaf8349fa7aaa);
+    background-size: cover;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 150px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tituloo {
+    font-size: 42px;
+    margin: 20px;
+}
+
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  
+}
+
+.about-text {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.text1 {
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.about-images {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-images img {
+  max-width: 250px;
+  border-radius: 8px;
+}

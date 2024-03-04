@@ -27,19 +27,23 @@
     flex-direction: column;
   }
   
-  label {
+  .letra {
     margin-top: 15px;
-    font-size: 16px;
-    color: #333;
+    font-size: 17px;
+    color: #ffffff;
   }
   
   input,
   textarea {
-    margin-top: 8px;
+    margin-top: 9px;
     padding: 30px;
-    font-size: 12px;
-    border: 1px solid #aaa;
+    font-size: 15px;
     border-radius: 6px;
+    resize: none;
+    border-color: #e9070f;
+    background-color: #505050; 
+    color: #fff; 
+    border: 1px solid #e9070f; 
   }
   
   .buttoncontac {

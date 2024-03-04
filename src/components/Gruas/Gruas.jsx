@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Gruas.css';
+import Footer from '../footer/Footer'
 import Grua1 from '../images/grua1.jpg';
 import Grua2 from '../images/grua2.jpg';
 import Grua3 from '../images/grua3.jpg';
@@ -118,7 +119,10 @@ const Gruas = () => {
           </div>
         ))}
       </div>
+      <Footer/>
+
     </div>
+
   );
 };
 

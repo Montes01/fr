@@ -12,6 +12,7 @@ import { useDispatch } from 'react-redux';
 import { login } from './store/slices/client'
 import { jwtDecode } from 'jwt-decode';
 import { store } from './store';
+import About from './components/About/About';
 const App = () => {
   const dispatcher = useDispatch();
   useEffect(() => {
@@ -42,6 +43,7 @@ const App = () => {
 
         {/* Nueva ruta para el perfil de grúa */}
         <Route path='/grua/:id' element={<CraneProfile />} />
+        <Route path='/About' element={<About/>} />
       </Routes>
     </div>
   );

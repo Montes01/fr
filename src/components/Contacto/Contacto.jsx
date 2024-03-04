@@ -27,7 +27,7 @@ const Contacto = () => {
     <div className="contact-container">
       <h2 className='tituloContacto'>Contactanos</h2>
       <form className="contact-form" onSubmit={handleSubmit}>
-        <label htmlFor="name">Nombre:</label>
+        <label className='letra' htmlFor="name">Nombre:</label>
         <input
           type="text"
           id="name"
@@ -37,7 +37,7 @@ const Contacto = () => {
           required
         />
 
-        <label htmlFor="email">Correo Electrónico:</label>
+        <label className='letra' htmlFor="email">Correo Electrónico:</label>
         <input
           type="email"
           id="email"
@@ -47,7 +47,7 @@ const Contacto = () => {
           required
         />
 
-        <label htmlFor="message">Mensaje:</label>
+        <label className='letra' htmlFor="message">Mensaje:</label>
         <textarea
           id="message"
           name="message"
