@@ -1,26 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import {  useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
 
 export default function Header() {
-  const [usuarioAutenticado, setUsuarioAutenticado] = useState(false);
-
-  // Esta función podría obtener el estado de autenticación desde tu backend al cargar la página
-  const verificarAutenticacion = () => {
-    // Simulación: podrías hacer una llamada al backend para verificar si el usuario está autenticado
-    const autenticado = localStorage.getItem('authToken') !== null;
-    setUsuarioAutenticado(autenticado);
-  };
-
-  useEffect(() => {
-    verificarAutenticacion();
-  }, []);
+  const usuarioAutenticado = useSelector((state) => state.client?.client !== null);
 
   const handleLogout = () => {
-    // elimina el token
-    localStorage.removeItem('authToken');
-    // Actualizamos el estado para reflejar que el usuario ya no está autenticado
-    setUsuarioAutenticado(false);
+    localStorage.removeItem('token');
+    window.location.href = '/';
   };
 
   document.addEventListener('scroll', function () {
@@ -40,7 +28,7 @@ export default function Header() {
         <NavLink to="/">
           <h1>
             Gruapp
-            <hr className='hr1'/>
+            <hr className='hr1' />
           </h1>
         </NavLink>
       </div>

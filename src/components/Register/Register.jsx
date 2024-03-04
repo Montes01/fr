@@ -1,71 +1,37 @@
-import React, { useState } from 'react';
 import './Register.css';
+import { SERVER_URL } from '../../constants/constants';
+import { validateFields } from '../../constants/utils';
 
 export default function Register() {
-  const [formData, setFormData] = useState({
-    username: '',
-    email: '',
-    phone: '',
-    password: '',
-  });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validar campos obligatorios
-    if (!formData.username || !formData.email || !formData.phone || !formData.password) {
-      alert('Todos los campos son obligatorios');
+    const formData = new FormData(e.currentTarget);
+    const username = formData.get('username');
+    const email = formData.get('email');
+    const phone = formData.get('phone');
+    const password = formData.get('password');
+    let fields;
+    try {
+      fields = validateFields(username, email, phone, password);
+    } catch (error) {
+      alert(error.message);
       return;
     }
-
-    // Validar formato de correo electrónico
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      alert('Ingrese un correo electrónico válido');
-      return;
-    }
-
-    // Validar formato de número telefónico (puedes ajustar según tus requisitos)
-    const phoneRegex = /^\d{10}$/;
-    if (!phoneRegex.test(formData.phone)) {
-      alert('Ingrese un número telefónico válido de 10 dígitos');
-      return;
-    }
-
-    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-    if (!passwordRegex.test(formData.password)) {
-      alert(
-        'La contraseña debe contener al menos 8 caracteres, incluyendo al menos una letra y un número'
-      );
-      return;
-    }
-
-    // Enviar solicitud al servidor solo si pasa todas las validaciones
-    const response = await fetch('http://localhost:3000/api/register', {
+    console.log(fields);
+    const response = await fetch(`${SERVER_URL}/register`, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
+      headers: { 'Content-Type': 'application/json', },
+      body: JSON.stringify(fields),
     });
 
-    const data = await response.json();
-    console.log(data);
-
-    // Limpiar el formulario
-    document.querySelector('.registro-form').reset();
-
-    // Mostrar el mensaje de registro
-    alert('Usuario registrado con éxito');
-
-    // Redirigir después de cerrar el alert (puedes ajustar el tiempo según tus necesidades)
-    setTimeout(() => {
-      window.location.href = '/Login'; // Puedes cambiar esto por la ruta a la que deseas redirigir
-    }, 100);
+    if (response.ok) {
+      alert('Usuario registrado exitosamente');
+      window.location.href = '/login';
+    } else {
+      alert('Error al registrar el usuario');
+    }
   };
 
   return (
@@ -74,19 +40,19 @@ export default function Register() {
         <h2 className="tituloRegister">Registro</h2>
         <label className='label-register'>
           Usuario:
-          <input className='input-register' type="text" name="username" onChange={handleChange} />
+          <input className='input-register' type="text" name="username" />
         </label >
         <label className='label-register'>
           Correo electrónico:
-          <input className='input-register' type="email" name="email" onChange={handleChange} />
+          <input className='input-register' type="email" name="email" />
         </label>
         <label className='label-register'>
           Número telefónico:
-          <input className='input-register' type="tel" name="phone" onChange={handleChange} />
+          <input className='input-register' type="tel" name="phone" />
         </label>
         <label className='label-register'>
           Contraseña:
-          <input className='input-register' type="password" name="password" onChange={handleChange} />
+          <input className='input-register' type="password" name="password" />
         </label>
         <button type="submit">Registrarse</button>
       </form>
