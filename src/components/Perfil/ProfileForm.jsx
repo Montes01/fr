@@ -1,10 +1,13 @@
-
+import React, { useState } from 'react';
 import './ProfileForm.css';
 import { useSelector } from 'react-redux';
 
 function ProfileForm() {
   const user = useSelector((state) => state.client?.client);
-  const defaultProfileImage = 'https://cdn-icons-png.flaticon.com/128/14505/14505987.png';
+  const defaultProfileImage = 'https://cdn-icons-png.flaticon.com/128/1946/1946392.png';
+  
+  const [photo, setPhoto] = useState(user?.photo || defaultProfileImage);
+
 
   const handlePhotoChange = (event) => {
     const selectedPhoto = event.target.files[0];
@@ -17,7 +20,7 @@ function ProfileForm() {
         <h2>Editar perfil</h2>
 
         <div className="form-group circular-photo-container">
-          <img className="profile-photo" src={user?.photo || defaultProfileImage} alt="Perfil" />
+          <img className="profile-photo" src={photo} alt="Perfil" />
 
           <div className="option-cambiar">
             <label htmlFor="photo">Cambiar foto</label>

@@ -5,7 +5,7 @@ import { validateFields } from '../../constants/utils';
 export default function Register() {
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
 
     const formData = new FormData(e.currentTarget);
     const username = formData.get('username');
@@ -30,8 +30,9 @@ export default function Register() {
       alert('Usuario registrado exitosamente');
       window.location.href = '/login';
     } else {
-      alert('Error al registrar el usuario');
-    }
+      const errorData = await response.json(); // Intenta parsear la respuesta como JSON
+      console.error('Error al registrar el usuario:', errorData);
+      alert('Error al registrar el usuario. Consulta la consola para más detalles.');    }
   };
 
   return (

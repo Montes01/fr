@@ -37,11 +37,10 @@ export default function Header() {
           <li>
             <NavLink className='opciones' to="/">Inicio</NavLink>
             <NavLink className='opciones' to="/gruas">Servicios</NavLink>
-            <NavLink className='opciones' to="/about">About</NavLink>
 
             {usuarioAutenticado && (
               <NavLink className='aggGrua' to="/AgregarGrua">+ Grúa</NavLink>
-            )}
+              )}
 
             {/* Mostrar el enlace de "Mi Cuenta" solo si el usuario está autenticado */}
             {usuarioAutenticado && (
@@ -54,6 +53,10 @@ export default function Header() {
                         Perfil
                       </NavLink>
                     )}
+                  </li>
+                  <li>
+                    <NavLink className='opciones' to="/About">About</NavLink>
+
                   </li>
                   <li>
                     {usuarioAutenticado && (
