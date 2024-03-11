@@ -9,12 +9,15 @@ import AgregarGrua from './components/AgregarGrua/AgregarGrua';
 import ProfileForm from './components/Perfil/ProfileForm';
 import CraneProfile from './components/CraneProfile/CraneProfile';
 import { useDispatch } from 'react-redux';
-import { login } from './store/slices/client'
+import { login } from './store/slices/client';
 import { jwtDecode } from 'jwt-decode';
 import { store } from './store';
 import About from './components/About/About';
+import Chat from './components/chat/chat'; 
+
 const App = () => {
   const dispatcher = useDispatch();
+
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
@@ -30,9 +33,11 @@ const App = () => {
     });
     return () => { unsubscribe(); }
   });
+
   return (
     <div>
       <Header />
+      <Chat />
       <Routes>
         <Route path='/' element={<Section />} />
         <Route path='/gruas' element={<Gruas />} />
@@ -40,10 +45,9 @@ const App = () => {
         <Route path='/register' element={<Register />} />
         <Route path='/AgregarGrua' element={<AgregarGrua />} />
         <Route path='/ProfileForm' element={<ProfileForm />} />
-
-        {/* Nueva ruta para el perfil de grúa */}
         <Route path='/grua/:id' element={<CraneProfile />} />
-        <Route path='/About' element={<About/>} />
+        <Route path='/About' element={<About />} />
+        
       </Routes>
     </div>
   );
