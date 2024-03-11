@@ -54,10 +54,7 @@ export default function Header() {
                       </NavLink>
                     )}
                   </li>
-                  <li>
-                    <NavLink className='opciones' to="/About">About</NavLink>
 
-                  </li>
                   <li>
                     {usuarioAutenticado && (
                       <NavLink to="/" onClick={handleLogout}>

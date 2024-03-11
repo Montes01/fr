@@ -15,12 +15,29 @@ const Contacto = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Aquí puedes manejar la lógica de envío del formulario
-    console.log('Formulario enviado:', formData);
-    // También puedes realizar una solicitud de envío a un servidor
-    // utilizando fetch, axios, u otra librería para peticiones HTTP.
+
+    try {
+      const response = await fetch('http://localhost:3000/enviar-formulario-contacto', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        console.log('Formulario enviado correctamente');
+        // Aquí puedes hacer algo después de enviar el formulario, como mostrar un mensaje de éxito o redirigir a otra página
+      } else {
+        console.error('Error al enviar el formulario:', response.statusText);
+        // Aquí puedes manejar el error de envío del formulario
+      }
+    } catch (error) {
+      console.error('Error al enviar el formulario:', error);
+      // Aquí puedes manejar el error de conexión o cualquier otro error
+    }
   };
 
   return (

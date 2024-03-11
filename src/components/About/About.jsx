@@ -7,7 +7,7 @@ const About = () => {
     <div className='bodyt'>
     <div className="about-box">
     <div className="about-container">
-      <h2 className='tituloo'>Acerca de Gruapp</h2>
+      <h2 className='tituloo'>Gruapp</h2>
       <p className='text1'>
         Gruapp comenzó como un proyecto institucional con el objetivo de ayudar a las personas que quedan varadas en carretera. Nos dedicamos a proporcionar asistencia rápida y confiable en situaciones de emergencia vehicular.
       </p>
