@@ -1,24 +1,135 @@
-body {
+.containerAgregar {
     font-family: 'Arial', sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 120vh;
     margin: 0;
+    background-color: black;
+    color: white;
+    
   }
   
-  div {
+  .containerInfoAgregar{
+    background-color: black;
+    border-radius: 15px;
+    height: 94vh;
+    margin-top: 90px;
     text-align: center;
+    width: 450px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
-  input {
-    margin-top: 10px;
+  .containerInfoAgregar::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 450px;
+    height: 93vh;
+    background: linear-gradient(0deg, transparent, #e30a13,#e30a13);
+    transform-origin: bottom right;
+    animation: animate 5s linear infinite;
+    animation-delay: -3s;
+  }
+  .containerInfoAgregar::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 450px;
+    height: 93vh;
+    background: linear-gradient(0deg, transparent, #e30a13,#e30a13);
+    transform-origin: bottom right;
+    animation: animate 5s linear infinite;
   }
   
-  img {
+  @keyframes animate{
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+  
+  .formAgregar{
+    position: absolute;
+    border-radius: 15px;
+    background: rgb(68, 68, 68);
+    z-index: 10;
+    width: 98%;
+    height: 93vh;
+  }
+  
+  .tituloAgregar{
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column  ;
+    justify-content: center;
+  }
+
+  .labelAgregar{
+    color: white;
+    margin-top: 15px;
+  } 
+  .customFileInput{
+    width: 50%;
+    margin-bottom: 20px;
     margin-top: 10px;
-    max-width: 100%;
-    border: 1px solid #ccc;
+    background-color: #0DCAF0;
+    color: black;
+  }
+  .customFileInput:hover{
+    background-color: #0b9bb8;
+  }
+  .campoFotoGrua{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .imagenAgregar{
+    height: 100px;
+  }
+  .publicar{
+    background-color: transparent;
+    color: white; /* Color del texto del botón fantasma */
+    border: 2px solid #3498db; /* Borde contorneado */
+    padding: 10px 20px;
     border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    width: 50%;
+    margin-left: 25%;
+  }
+  .publicar:hover{
+    background-color: #3498db; /* Cambia el color de fondo al pasar el ratón sobre el botón */
+    color: black;   
+    
+  }
+  .inputAgregar{
+    width: 60%;
+  }
+  .errorMessage{
+    color: red;
+    font-size: 20px;
+    display:flex ;
+    flex-direction: column;
+    align-items: center;
+
+    }
+  .hrError{
+    background-color: black;
+    border-color: black;
+    width: 77%;
+    height: 0.3vh;
   }
   

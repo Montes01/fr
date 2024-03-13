@@ -36,7 +36,7 @@ export default function Header() {
         <ul>
           <li>
             <NavLink className='opciones' to="/">Inicio</NavLink>
-            <NavLink className='opciones' to="/gruas">Servicios</NavLink>
+            <NavLink className='opciones' to="/Gruas">Servicios</NavLink>
 
             {usuarioAutenticado && (
               <NavLink className='aggGrua' to="/AgregarGrua">+ Grúa</NavLink>
