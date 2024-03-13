@@ -1,16 +1,24 @@
 .Beneficio{
     display: grid;
     grid-template-columns: 45% 55%;
+    grid-template-rows: 20% 80%;
     background-color: #F7F7F7;
     overflow: hidden;
     height: 90vh;
     align-items: center;
+    Font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
 }
-.containerImage{
-    grid-column: 1/2;
+.tituloBeneficio{
+  grid-column: 1/3;
+  font-size: 30px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
 }
+
 .containerBeneficio{
     grid-column: 2/3;
+    grid-row: 2/3;
 }
 .containerBeneficio h1{
   font-size: 38px;
@@ -20,13 +28,7 @@
   flex-direction: column;
   align-items: center;
 }
-.hrBeneficio{
-  width: 91%;
-  height: 0.5vh;
-  background-color: #E30A13;
-  border: none;
-  margin-left: 9%;
-}
+
 
 .lista {
     margin-top: 20px;
@@ -88,5 +90,7 @@
   .containerImage{
     display: flex;
     justify-content: center;
-    margin-top: 10%;
+    grid-column: 1/2;
+    grid-row: 2/3;
+   
   }
