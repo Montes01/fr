@@ -1,7 +1,9 @@
+
+
 .profile-editor {
   width: 35%;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #424242;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   color: white;
@@ -83,7 +85,7 @@ button:hover {
   background-color: #45a049;
 }
 .section-perfil{
-  background-color:white;
+  background: linear-gradient(45deg, #7c7d7e, #000000, #444444, #7d7d7e);
   height: 130vh;
   display: flex;
   align-items: center;

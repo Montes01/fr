@@ -1,10 +1,10 @@
 .bodyt{
-  
+  background-color: black;
 }
 
 .about-box {
     padding: 110px;
-    background: url(https://img.freepik.com/foto-gratis/foto-carretera-rodeada-campos-hierba-seca-cielo-puesta-sol_181624-10934.jpg?w=1380&t=st=1709534045~exp=1709534645~hmac=855101b53c4a54b888d08e3ac7bbd0bda7aa2450fb971e53c5fbaf8349fa7aaa);
+    background-color: black;
     background-size: cover;
     position: relative;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
