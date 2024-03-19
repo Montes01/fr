@@ -83,8 +83,6 @@
   }
 }
 
-
-
 .contactar-btn {
   background-color: #1BD741; 
   color: black; 
@@ -100,18 +98,25 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  
-
 }
 
 .contactar-btn:hover {
   background-color: #0ce49c; 
   transform: scale(1.05);
- 
 }
 
 .logoWhatsapp {
   width: 18%; 
-
 }
+/* Gruas.css */
+
+.buscador-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
 

@@ -7,7 +7,6 @@ import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import AgregarGrua from './components/AgregarGrua/AgregarGrua';
 import ProfileForm from './components/Perfil/ProfileForm';
-import CraneProfile from './components/CraneProfile/CraneProfile';
 import { useDispatch } from 'react-redux';
 import { login } from './store/slices/client';
 import { jwtDecode } from 'jwt-decode';
@@ -45,7 +44,6 @@ const App = () => {
         <Route path='/register' element={<Register />} />
         <Route path='/AgregarGrua' element={<AgregarGrua />} />
         <Route path='/ProfileForm' element={<ProfileForm />} />
-        <Route path='/grua/:id' element={<CraneProfile />} />
         <Route path='/About' element={<About />} />
         
       </Routes>

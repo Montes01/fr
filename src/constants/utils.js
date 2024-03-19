@@ -31,3 +31,4 @@ export function validateFields(username, email, phone, password) {
         password,
     }
 }
+

@@ -33,18 +33,6 @@
     color: #ffffff;
   }
   
-  input,
-  textarea {
-    margin-top: 9px;
-    padding: 30px;
-    font-size: 15px;
-    border-radius: 6px;
-    resize: none;
-    border-color: #e9070f;
-    background-color: #505050; 
-    color: #fff; 
-    border: 1px solid #e9070f; 
-  }
   
   .buttoncontac {
     margin-top: 20px;
