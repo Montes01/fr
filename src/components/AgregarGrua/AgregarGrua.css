@@ -123,6 +123,9 @@
 .labelAgregar {
   color: black;
   margin-top: 12px;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .customFileInput {
@@ -186,6 +189,7 @@
   border-radius: 4px;
   border: 2px solid #101010;
   color: black;
+  padding: 8px;
 }
 
 .errorMessage {
