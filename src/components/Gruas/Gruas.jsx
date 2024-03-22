@@ -19,25 +19,25 @@ const Gruas = () => {
       });
   }, []);
 
-  const filtrarGruas = () => {
-    if (!busqueda.trim()) {
-      return gruas; // Mostrar todas las grúas si no hay búsqueda
-    }
-    const terminoBusqueda = busqueda.trim().toLowerCase();
+  // const filtrarGruas = () => {
+  //   if (!busqueda.trim()) {
+  //     return gruas; // Mostrar todas las grúas si no hay búsqueda
+  //   }
+  //   const terminoBusqueda = busqueda.trim().toLowerCase();
 
-    if (/^\d+kg$/.test(terminoBusqueda)) {
-      // Búsqueda por capacidad
-      const capacidadBusqueda = parseInt(terminoBusqueda);
-      return gruas.filter((grua) => grua.capacidad === capacidadBusqueda);
-    } else if (/^\d+$/.test(terminoBusqueda)) {
-      // Búsqueda por modelo
-      const modeloBusqueda = parseInt(terminoBusqueda);
-      return gruas.filter((grua) => grua.modelo === modeloBusqueda);
-    } else {
-      // Búsqueda por ubicación
-      return gruas.filter((grua) => grua.ubicacion.toLowerCase().includes(terminoBusqueda));
-    }
-  };
+  //   if (/^\d+kg$/.test(terminoBusqueda)) {
+  //     // Búsqueda por capacidad
+  //     const capacidadBusqueda = parseInt(terminoBusqueda);
+  //     return gruas.filter((grua) => grua.capacidad === capacidadBusqueda);
+  //   } else if (/^\d+$/.test(terminoBusqueda)) {
+  //     // Búsqueda por modelo
+  //     const modeloBusqueda = parseInt(terminoBusqueda);
+  //     return gruas.filter((grua) => grua.modelo === modeloBusqueda);
+  //   } else {
+  //     // Búsqueda por ubicación
+  //     return gruas.filter((grua) => grua.ubicacion.toLowerCase().includes(terminoBusqueda));
+  //   }
+  // };
 
   const openWhatsAppChat = (grua) => {
     // Comprobar si la propiedad 'whatsapp' existe en el objeto 'grua'
@@ -66,9 +66,9 @@ const Gruas = () => {
 
       </div>
       <div className="gruas-list">
-        {filtrarGruas().map((grua) => (
+        {gruas.map((grua) => (
           <div key={grua.id} className="grua-item">
-            <img src={`http://localhost:3000${grua.foto_path}`} alt={grua.marca} className="grua-imagen" />
+            <img src={grua.foto_path.replace("/ruta-base-imagenes/", "")} alt={grua.marca} className="grua-imagen" />
             <h2 className='tituloGruas'>{grua.marca}</h2>
             <p>Modelo: {grua.modelo}</p>
             <p>Capacidad: {grua.capacidad} kg</p>

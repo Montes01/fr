@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./AgregarGrua.css";
 import { useSelector } from "react-redux";
+import { UseUpload } from "../../firebase/hooks";
 
 function AgregarGrua() {
   const [gruaInfo, setGruaInfo] = useState({
@@ -20,6 +21,9 @@ function AgregarGrua() {
   const [errorMensaje, setErrorMensaje] = useState("");
 
   useEffect(() => {
+
+
+
     if (gruaInfo.ubicacion) {
       axios
         .get(`http://localhost:3000/gruas?ubicacion=${gruaInfo.ubicacion}`)
@@ -78,16 +82,15 @@ function AgregarGrua() {
     try {
       setIsLoading(true);
 
-      const formData = new FormData();
-      formData.append("marca", gruaInfo.marca);
-      formData.append("modelo", gruaInfo.modelo);
-      formData.append("capacidad", gruaInfo.capacidad);
-      formData.append("whatsapp", gruaInfo.whatsapp);
-      formData.append("ubicacion", gruaInfo.ubicacion);
-      formData.append("foto", gruaInfo.foto);
-      formData.append("clienteId", usuario.id);
+      let picUrl = await UseUpload(gruaInfo.foto, "gruas")
 
-      await axios.post("http://localhost:3000/gruas", formData);
+      gruaInfo.foto = picUrl
+      gruaInfo.clienteId = usuario.id;
+
+      console.log(picUrl)
+
+
+      await axios.post("http://localhost:3000/gruas", gruaInfo);
 
       setGruaInfo({
         marca: "",
@@ -98,11 +101,10 @@ function AgregarGrua() {
         foto: null,
       });
 
-      setIsLoading(false);
       setPublicacionExitosa(true);
 
       setTimeout(() => {
-        window.location.reload();
+        // window.location.reload();
       }, 2000);
     } catch (error) {
       console.error("Error al publicar la grúa:", error.message);
